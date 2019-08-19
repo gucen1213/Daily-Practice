@@ -51,7 +51,24 @@ static void breath_led(void)   //???
     set_led_gradation(ABS(s_nGray - (TOP >> 1)));
 }
 
+
+def_simple_fsm(print_task,
+    print_str_pool_item_t  *pfsmPrintHello;
+)
+
+def_simple_fsm(check_world,
+    def_params(
+        fsm(check_string) fsmCheckString;
+    )
+)
+
+def_simple_fsm(task_check)
+
+declare_simple_fsm(task_check);
 declare_simple_fsm(print_hello);
+declare_simple_fsm(print_task);
+declare_simple_fsm(check_world);
+
 def_simple_fsm(print_hello,
     def_params(
         fsm(print_string) fsmPrintString;
@@ -76,13 +93,6 @@ fsm_implementation(print_hello)
         )
     )
 
-
-declare_simple_fsm(print_task);
-def_simple_fsm(print_task,
-//    fsm(print_hello) fsmPrintHello;
-    print_str_pool_item_t  *pfsmPrintHello;
-)
-
 fsm_implementation(print_task)
     def_states(WAIT_EVENT,APPLY,PRINT)
     body(
@@ -106,13 +116,6 @@ fsm_implementation(print_task)
     )
 
 
-declare_simple_fsm(check_world);
-def_simple_fsm(check_world,
-    def_params(
-        fsm(check_string) fsmCheckString;
-    )
-)
-
 fsm_implementation(check_world)
     def_states(CHECK_INIT,CHECK)
     body(
@@ -132,10 +135,6 @@ fsm_implementation(check_world)
     )
 
 static fsm(check_world) s_fsmCheckWorld;
-
-declare_simple_fsm(task_check);
-def_simple_fsm(task_check)
-
 fsm_implementation(task_check)
     def_states(CHECK_STRING)
 
@@ -150,6 +149,7 @@ fsm_implementation(task_check)
 
 static fsm(task_check) s_fsmTaskCheck;
 static fsm(print_task) s_fsmPrintTask;
+
 int main(void)
 {
     led_init();
