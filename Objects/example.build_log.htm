@@ -1,0 +1,383 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 12312 quectel, Microsoft, LIC=1WS74-FKYKN-IL1CB-2LCRU-S94MD-7NGKN
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.28.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.12
+Assembler:       Armasm.exe V6.12
+Linker/Locator:  ArmLink.exe V6.12
+Library Manager: ArmAr.exe V6.12
+Hex Converter:   FromElf.exe V6.12
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+D:\BaiduNetdiskDownload\example\example\example.uvprojx
+Project File Date:  08/19/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.12', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(7): warning: In file included from...
+./print_string\print_string.h(6): warning: redefinition of typedef 'fsm_print_string_t' is a C11 feature [-Wtypedef-redefinition]
+extern_simple_fsm(print_string,
+^
+../example/simple_fsm.h(80): note: expanded from macro 'extern_simple_fsm'
+        __extern_simple_fsm(fsm(__NAME), __VA_ARGS__)  
+                            ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(3): note: expanded from here
+fsm_print_string_t
+^
+./print_string\print_string.h(6): note: previous definition is here
+../example/simple_fsm.h(80): note: expanded from macro 'extern_simple_fsm'
+        __extern_simple_fsm(fsm(__NAME), __VA_ARGS__)  
+                            ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(3): note: expanded from here
+fsm_print_string_t
+^
+main.c(8): warning: In file included from...
+../example/./check_string/check_string.h(6): warning: redefinition of typedef 'fsm_check_string_t' is a C11 feature [-Wtypedef-redefinition]
+extern_simple_fsm(check_string,
+^
+../example/simple_fsm.h(80): note: expanded from macro 'extern_simple_fsm'
+        __extern_simple_fsm(fsm(__NAME), __VA_ARGS__)  
+                            ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(23): note: expanded from here
+fsm_check_string_t
+^
+../example/./check_string/check_string.h(6): note: previous definition is here
+../example/simple_fsm.h(80): note: expanded from macro 'extern_simple_fsm'
+        __extern_simple_fsm(fsm(__NAME), __VA_ARGS__)  
+                            ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(23): note: expanded from here
+fsm_check_string_t
+^
+main.c(55): warning: redefinition of typedef 'fsm_print_hello_t' is a C11 feature [-Wtypedef-redefinition]
+def_simple_fsm(print_hello,
+^
+../example/simple_fsm.h(56): note: expanded from macro 'def_simple_fsm'
+        __simple_fsm(fsm(__NAME), __VA_ARGS__)
+                     ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(49): note: expanded from here
+fsm_print_hello_t
+^
+main.c(54): note: previous definition is here
+declare_simple_fsm(print_hello);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(45): note: expanded from here
+fsm_print_hello_t
+^
+main.c(81): warning: redefinition of typedef 'fsm_print_task_t' is a C11 feature [-Wtypedef-redefinition]
+def_simple_fsm(print_task,
+^
+../example/simple_fsm.h(56): note: expanded from macro 'def_simple_fsm'
+        __simple_fsm(fsm(__NAME), __VA_ARGS__)
+                     ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(63): note: expanded from here
+fsm_print_task_t
+^
+main.c(80): note: previous definition is here
+declare_simple_fsm(print_task);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(61): note: expanded from here
+fsm_print_task_t
+^
+main.c(110): warning: redefinition of typedef 'fsm_check_world_t' is a C11 feature [-Wtypedef-redefinition]
+def_simple_fsm(check_world,
+^
+../example/simple_fsm.h(56): note: expanded from macro 'def_simple_fsm'
+        __simple_fsm(fsm(__NAME), __VA_ARGS__)
+                     ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(81): note: expanded from here
+fsm_check_world_t
+^
+main.c(109): note: previous definition is here
+declare_simple_fsm(check_world);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(77): note: expanded from here
+fsm_check_world_t
+^
+main.c(134): warning: tentative definition of variable with internal linkage has incomplete non-array type 'fsm_check_world_t' (aka 'struct fsm_check_world_t') [-Wtentative-definition-incomplete-type]
+static fsm(check_world) s_fsmCheckWorld;
+                        ^
+main.c(109): note: forward declaration of 'struct fsm_check_world_t'
+declare_simple_fsm(check_world);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(77): note: expanded from here
+fsm_check_world_t
+^
+main.c(137): warning: redefinition of typedef 'fsm_task_check_t' is a C11 feature [-Wtypedef-redefinition]
+def_simple_fsm(task_check)
+^
+../example/simple_fsm.h(56): note: expanded from macro 'def_simple_fsm'
+        __simple_fsm(fsm(__NAME), __VA_ARGS__)
+                     ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(97): note: expanded from here
+fsm_task_check_t
+^
+main.c(136): note: previous definition is here
+declare_simple_fsm(task_check);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(95): note: expanded from here
+fsm_task_check_t
+^
+main.c(151): warning: tentative definition of variable with internal linkage has incomplete non-array type 'fsm_task_check_t' (aka 'struct fsm_task_check_t') [-Wtentative-definition-incomplete-type]
+static fsm(task_check) s_fsmTaskCheck;
+                       ^
+main.c(136): note: forward declaration of 'struct fsm_task_check_t'
+declare_simple_fsm(task_check);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(95): note: expanded from here
+fsm_task_check_t
+^
+main.c(152): warning: tentative definition of variable with internal linkage has incomplete non-array type 'fsm_print_task_t' (aka 'struct fsm_print_task_t') [-Wtentative-definition-incomplete-type]
+static fsm(print_task) s_fsmPrintTask;
+                       ^
+main.c(80): note: forward declaration of 'struct fsm_print_task_t'
+declare_simple_fsm(print_task);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(61): note: expanded from here
+fsm_print_task_t
+^
+main.c(134): error: tentative definition has type 'fsm_check_world_t' (aka 'struct fsm_check_world_t') that is never completed
+static fsm(check_world) s_fsmCheckWorld;
+                        ^
+main.c(109): note: forward declaration of 'struct fsm_check_world_t'
+declare_simple_fsm(check_world);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(77): note: expanded from here
+fsm_check_world_t
+^
+main.c(151): error: tentative definition has type 'fsm_task_check_t' (aka 'struct fsm_task_check_t') that is never completed
+static fsm(task_check) s_fsmTaskCheck;
+                       ^
+main.c(136): note: forward declaration of 'struct fsm_task_check_t'
+declare_simple_fsm(task_check);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(95): note: expanded from here
+fsm_task_check_t
+^
+main.c(152): error: tentative definition has type 'fsm_print_task_t' (aka 'struct fsm_print_task_t') that is never completed
+static fsm(print_task) s_fsmPrintTask;
+                       ^
+main.c(80): note: forward declaration of 'struct fsm_print_task_t'
+declare_simple_fsm(print_task);
+^
+../example/simple_fsm.h(75): note: expanded from macro 'declare_simple_fsm'
+#define declare_simple_fsm(__NAME)  __declare_simple_fsm(fsm(__NAME))
+                                                         ^
+../example/simple_fsm.h(42): note: expanded from macro 'fsm'
+#define fsm(__NAME) fsm_##__NAME##_t
+                    ^
+<scratch space>(61): note: expanded from here
+fsm_print_task_t
+^
+9 warnings and 3 errors generated.
+compiling main.c...
+".\Objects\example.axf" - 3 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
+                ARM.CMSIS.5.5.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: USART Version: 2.3.0
+   * Component: CORE Version: 5.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.MDK-Middleware.7.8.0.pack
+                Keil.MDK-Middleware.7.8.0
+                Middleware for Keil MDK-Professional and MDK-Plus
+   * Component: Buttons Version: 1.0.0
+   * Component: LED Version: 1.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
+                Keil.STM32F4xx_DFP.2.13.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Buttons Version: 1.0.0
+   * Component: LED Version: 1.0.0
+   * Component: USART Version: 2.10
+   * Component: Classic Version: 1.7.4
+   * Component: Common Version: 1.7.4
+   * Component: Cortex Version: 1.7.4
+   * Component: DMA Version: 1.7.4
+   * Component: GPIO Version: 1.7.4
+   * Component: PWR Version: 1.7.4
+   * Component: RCC Version: 1.7.4
+   * Component: UART Version: 1.7.4
+   * Component: USART Version: 1.7.4
+   * Component: Startup Version: 2.6.2
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F429ZITx
+  .\RTE\_Target_1
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Driver\Include
+  C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\STM32F4xx_HAL_Driver\Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Board Support:Buttons:1.0.0 (API)
+      Include file:  Board\Board_Buttons.h
+
+   * Component: ::Board Support:LED:1.0.0 (API)
+      Include file:  Board\Board_LED.h
+
+   * Component: ::CMSIS Driver:USART:2.3.0 (API)
+      Include file:  CMSIS\Driver\Include\Driver_USART.h
+
+   * Component: ::Device:STM32Cube Framework:1.0.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.2.0
+
+   * Component: Keil.STM32F429I-Discovery::Board Support:Buttons:1.0.0
+      Source file:   MDK\Boards\ST\STM32F429I-Discovery\Common\Buttons_F429Discovery.c
+
+   * Component: Keil.STM32F429I-Discovery::Board Support:LED:1.0.0
+      Source file:   MDK\Boards\ST\STM32F429I-Discovery\Common\LED_F429Discovery.c
+
+   * Component: Keil::CMSIS Driver:USART:2.10
+      Source file:   CMSIS\Driver\USART_STM32F4xx.c
+
+   * Component: Keil::Device:STM32Cube Framework:Classic:1.7.4
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Source file:   MDK\Templates\Src\stm32f4xx_it.c
+      Include file:  MDK\Templates\Inc\main.h
+      Source file:   MDK\Templates\Src\main.c
+      Include file:  MDK\Templates_LL\Inc\main.h
+      Source file:   MDK\Templates_LL\Src\main.c
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.7.4
+      Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.7.4
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.7.4
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.7.4
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.7.4
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.7.4
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:UART:1.7.4
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c
+
+   * Component: Keil::Device:STM32Cube HAL:USART:1.7.4
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_usart.c
+
+   * Component: Keil::Device:Startup:2.6.2
+      Source file:   MDK\Device\Source\ARM\STM32F42xxx_43xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f429xx.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
