@@ -6,9 +6,12 @@
 #include "app_cfg.h"
 #include "print_string.h"
 #include "./check_string/check_string.h"
-#include "ooc.h"
 #include "simple_fsm.h"
 #include "print_pool.h"
+
+
+#define __PLOOC_CLASS_IMPLEMENT
+#include "ooc.h"
 
 static event_t s_tPrint;
 
@@ -119,19 +122,19 @@ fsm_implementation(print_task)
 fsm_implementation(check_world)
     def_states(CHECK_INIT,CHECK)
     body(
-        state(CHECK_INIT,
+        state(CHECK_INIT){
             if(init_fsm(check_string,&this.fsmCheckString,
                 args((uint8_t*)"world"))
             ){
                 transfer_to(CHECK);
             }
-        )
+        }
 
-        state(CHECK,
+        state(CHECK){
             if(fsm_rt_cpl == call_fsm(check_string,&this.fsmCheckString)){
                 fsm_cpl();
             }
-        )
+        }
     )
 
 static fsm(check_world) s_fsmCheckWorld;
@@ -139,12 +142,12 @@ fsm_implementation(task_check)
     def_states(CHECK_STRING)
 
     body(
-        state(CHECK_STRING,
+        state(CHECK_STRING){
             if(fsm_rt_cpl == call_fsm(check_world,&s_fsmCheckWorld)){
                 SET_EVENT(&s_tPrint);
                 fsm_cpl(); 
-            }
-        )
+            }       
+        }
     )
 
 static fsm(task_check) s_fsmTaskCheck;
