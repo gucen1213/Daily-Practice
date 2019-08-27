@@ -65,7 +65,11 @@ def_simple_fsm(check_world,
     )
 )
 
-def_simple_fsm(task_check)
+def_simple_fsm(task_check,
+    def_params(
+        fsm(check_world) fsmCheckWorld;
+    )
+)
 
 declare_simple_fsm(task_check);
 declare_simple_fsm(print_hello);
@@ -81,19 +85,19 @@ def_simple_fsm(print_hello,
 fsm_implementation(print_hello)
     def_states(PRINT_INIT,PRINT)
     body(
-        state(PRINT_INIT,
+        state(PRINT_INIT){
             if(init_fsm(print_string,&this.fsmPrintString,
                 args((uint8_t*)"hello\r\n"))
             ){
                 transfer_to(PRINT);
             }
-        )
+        }
 
-        state(PRINT,
+        state(PRINT){
             if(fsm_rt_cpl == call_fsm(print_string,&this.fsmPrintString)){
                 fsm_cpl();
             }
-        )
+        }
     )
 
 fsm_implementation(print_task)
@@ -137,13 +141,11 @@ fsm_implementation(check_world)
         }
     )
 
-static fsm(check_world) s_fsmCheckWorld;
 fsm_implementation(task_check)
     def_states(CHECK_STRING)
-
     body(
         state(CHECK_STRING){
-            if(fsm_rt_cpl == call_fsm(check_world,&s_fsmCheckWorld)){
+            if(fsm_rt_cpl == call_fsm(check_world,&this.fsmCheckWorld)){
                 SET_EVENT(&s_tPrint);
                 fsm_cpl(); 
             }       
